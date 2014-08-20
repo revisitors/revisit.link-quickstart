@@ -1,0 +1,17 @@
+{
+  "name": "glitch-api-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL3",
+  "dependencies": {
+    "body-parser": "^1.6.2",
+    "data-uri-to-buffer": "0.0.3",
+    "express": "^4.8.2",
+    "glitch-jpg": "^1.0.1"
+  }
+}
