@@ -1,9 +1,11 @@
-var express = require('express')
-var fs = require('fs')
-var app = express()
+var nconf = require('nconf')
 var bodyParser = require('body-parser')
 var dataUriToBuffer = require('data-uri-to-buffer')
 var glitch = require('glitch-jpg')
+var express = require('express')
+var app = express()
+
+nconf.argv().env().file({ file: 'local.json'});
 
 app.use(bodyParser.json({limit: '1mb'}))
 app.use(express.static(__dirname + '/public'))
@@ -19,4 +21,4 @@ app.post('/service', function(req, res) {
   res.json({content: 'data:' + imgBuff.type + ';base64,' + glitchedBuff.toString('base64')})
 })
 
-app.listen(8000)
+app.listen(nconf.get('port'))
