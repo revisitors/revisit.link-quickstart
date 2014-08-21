@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "watchify -o public/js/bundle.js -v -d public/js/main.js & nodemon index.js"
   },
   "author": "",
   "license": "GPL3",
   "dependencies": {
     "body-parser": "^1.6.2",
+    "browserify": "^5.10.1",
     "data-uri-to-buffer": "0.0.3",
     "express": "^4.8.2",
     "glitch-jpg": "^1.0.3",
-    "nconf": "^0.6.9"
+    "nconf": "^0.6.9",
+    "raf": "^2.0.3",
+    "spatial-noise": "^1.0.0",
+    "watchify": "^1.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
