@@ -21,4 +21,6 @@ app.post('/service', function(req, res) {
   res.json({content: 'data:' + imgBuff.type + ';base64,' + glitchedBuff.toString('base64')})
 })
 
-app.listen(nconf.get('port'))
+var port = nconf.get('port');
+app.listen(port)
+console.log('server running on port: ', port);
