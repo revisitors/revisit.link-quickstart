@@ -30,8 +30,7 @@ var submitHandler = function(e){
     var parsed;
     if (xhr.readyState === 4) {
       parsed = JSON.parse(xhr.responseText)
-      img.src = parsed.content
-      console.log(parsed.content)
+      img.src = parsed.content;
     }
   }
   xhr.open('POST', '/service')
@@ -48,9 +47,8 @@ var fileHandler = function(e) {
     console.log(payload)
   }
 
-  if (e.target.files[0].type !== "image/jpeg" &&
-      e.target.files[0].type !== "image/jpg") {
-    alert('Nah, you need a jpeg');
+  if (!~e.target.files[0].type.indexOf("image")) {
+    alert('Nah, this is for images');
   } else {
     reader.readAsDataURL(e.target.files[0]);
   }
