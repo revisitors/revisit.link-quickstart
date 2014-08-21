@@ -30,12 +30,7 @@ var submitHandler = function(e){
     var parsed;
     if (xhr.readyState === 4) {
       parsed = JSON.parse(xhr.responseText)
-      img.src = parsed.content
-
-      var data = _parseB64(parsed.content);
-      var arrBuffer = _base64toArrayBuffer(data.base64);
-      var blob = new Blob([arrBuffer], {type: data.type});
-      img.src = URL.createObjectURL(blob);
+      img.src = parsed.content;
     }
   }
   xhr.open('POST', '/service')
@@ -56,24 +51,6 @@ var fileHandler = function(e) {
     alert('Nah, this is for images');
   } else {
     reader.readAsDataURL(e.target.files[0]);
-  }
-}
-
-var _base64toArrayBuffer  = function(base64) {
-  var binary_string =  window.atob(base64);
-  var len = binary_string.length;
-  var bytes = new Uint8Array( len );
-  for (var i = 0; i < len; i++)        {
-    var ascii = binary_string.charCodeAt(i);
-    bytes[i] = ascii;
-  }
-  return bytes.buffer;
-}
-
-var _parseB64 = function(b64str) {
-  return {
-    base64: b64str.substr(b64str.indexOf(',') + 1),
-    type: b64str.match(/:([^}]*);/)[1]
   }
 }
 
