@@ -7,7 +7,7 @@ var app = express()
 
 nconf.argv().env().file({ file: 'local.json'});
 
-app.use(bodyParser.json({limit: '1mb'}))
+app.use(bodyParser.json({limit: '2mb'}))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res) {
