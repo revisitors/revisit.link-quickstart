@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 app.post('/service', function(req, res) {
   var imgBuff = dataUriToBuffer(req.body.content.data)
   var glitched = glitch(imgBuff)
-  var dataUri = 'data:' + imgBuff.type + 'base64,' + glitched.toString('base64')
+  var dataUri = 'data:' + imgBuff.type + ';base64,' + glitched.toString('base64')
   req.body.content.data = dataUri
   req.body.content.type = imgBuff.type
   res.json(req.body)
