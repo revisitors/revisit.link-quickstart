@@ -1,6 +1,6 @@
 {
-  "name": "glitch-api-example",
-  "version": "2.0.0",
+  "name": "revisit-twitter",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "data-uri-to-buffer": "0.0.3",
     "express": "^4.8.2",
     "glitch-jpg": "^1.0.4",
-    "nconf": "^0.6.9"
+    "nconf": "^0.6.9",
+    "node-twitter-api": "^1.2.3"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
