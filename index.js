@@ -16,7 +16,7 @@ app.use(bodyParser.json({limit: '2mb'}))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res) {
-  res.sendFile( __dirname + '/index.html')
+  res.send(200)
 })
 
 
