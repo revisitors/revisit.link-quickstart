@@ -1,16 +1,11 @@
 var nconf = require('nconf')
 var bodyParser = require('body-parser')
 var dataUriToBuffer = require('data-uri-to-buffer')
+var glitch = require('glitch-jpg')
 var express = require('express')
-var twitterAPI = require('node-twitter-api')
 var app = express()
-nconf.argv().env().file({ file: 'local.json'})
 
-var twitter = new twitterAPI({
-  consumerKey: nconf.get('consumerKey'),
-  consumerSecret: nconf.get('consumerSecret'),
-  callback: ''
-})
+nconf.argv().env().file({ file: 'local.json'})
 
 app.use(bodyParser.json({limit: '2mb'}))
 app.use(express.static(__dirname + '/public'))
@@ -22,13 +17,10 @@ app.get('/', function(req, res) {
 
 app.post('/service', function(req, res) {
   var imgBuff = dataUriToBuffer(req.body.content.data)
-  var payload = {
-    media: [imgBuff],
-    status: ''
-  }
-  twitter.statuses('update_with_media', payload, nconf.get('accessKey'), nconf.get('accessSecret'), function(err, data) {
-    if (err) console.log(err)
-  })
+  var glitched = glitch(imgBuff)
+  var dataUri = 'data:' + imgBuff.type + ';base64,' + glitched.toString('base64')
+  req.body.content.data = dataUri
+  req.body.content.type = imgBuff.type
   res.json(req.body)
 })
 
