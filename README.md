@@ -1,6 +1,6 @@
 # Starter revisit.link Service
 
-[Ryan](http://github.com/kid-icarus) made [a glitch sample app](https://github.com/revisitors/glitch-api-example) for <revisit.link>. I cloned it and edited it a little to make it more bare bones/general use. You can use it to build your own revisit.link service on top of it, if you want.
+[Ryan](http://github.com/kid-icarus) made [a glitch sample app](https://github.com/revisitors/glitch-api-example) for [revisit.link](http://revisit.link). I cloned it and edited it a little to make it more bare bones/general use. You can use it to build your own revisit.link service on top of it, if you want.
 
 
 ## How does it work?
