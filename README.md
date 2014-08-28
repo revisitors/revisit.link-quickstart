@@ -15,6 +15,7 @@
 #### Transform
 
 1. In transformer.js, write code to do your transformation to the image buffer. (See below for examples of how others are doing these transformations.)
+1. Make sure your exported function returns the modified image _buffer_ (or change the code in index.js to not expect a buffer)
 1. Add dependencies as needed with `npm install --save <libname>`
 1. Test your code locally by running `npm start` from the repo directory and opening <http://localhost:8000> in your browser
 
