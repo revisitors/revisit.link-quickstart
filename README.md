@@ -30,6 +30,14 @@ _Note: if you change the name of this lib, make the corresponding changes in ind
 1. Copy the URL/port where your app is running
 1. Oh yeah, make sure it's actually running still...
 
+
+#### Style the test page (if you want?)
+
+1. You can style the root test page however you want
+1. html is in index.html
+1. CSS/JS are in `public`
+
+
 #### Add to revisit.link
 
 1. Go to <https://github.com/revisitors/revisit.link.hub>
