@@ -2,45 +2,27 @@ body {
     width: 100%;
     margin: 0;
     font-family: monospace, sans-serif;
+    font-size: 20px;
 }
 
 img {
     width: 100%;
 }
 
-#noise {
-    position: relative;
-}
-
-.hova {
-    z-index: 1;
-    background: rgba(20, 23, 20, 0.55);
-    color: #08F208;
-    position: absolute;
-    margin: 10px 27%;
-    padding: 20px 35px;
-    width: 600px;
+.container {
+    color: #111;
+    margin: 20px auto;
+    width: 700px;
 }
 
 .msbtn {
     margin-bottom: 10px;
-    padding: 4px;
+    padding: 15px 30px;
     border-radius: 2px;
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
     border-top: 2px solid #FFF;
     background: #EBE8D9;
     border-left: 2px solid #FFF;
-}
-
-.ms-btn:first-letter {
-    text-decoration: underline;
-}
-
-.kill {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-    box-shadow: 11px 2px 15px 8px #FE0C0C;
+    cursor: pointer;
 }

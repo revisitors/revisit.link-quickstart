@@ -1,19 +1,18 @@
 {
-  "name": "glitch-api-example",
-  "version": "2.0.0",
-  "description": "",
+  "name": "revisit.link-quickstart",
+  "version": "1.0.0",
+  "description": "Quick skeleton revisit.link service, generalized from kid-icarus's glitch-api-example",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "GPL3",
+  "author": "Jason Rhodes",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.6.2",
     "data-uri-to-buffer": "0.0.3",
-    "express": "^4.8.2",
-    "glitch-jpg": "^1.0.4",
-    "nconf": "^0.6.9"
+    "express": "^4.8.2"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
