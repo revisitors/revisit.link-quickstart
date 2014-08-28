@@ -23,8 +23,11 @@ _Note: if you change the name of this lib, make the corresponding changes in ind
 #### Deploy
 
 1. Find hosting for your app (see below for some example options)
-1. Deploy code to the hosting provider, copy the URL/port where your app is running
-1. Oh yeah, make sure it's actually running...
+1. Point a domain or subdomain A record at your new hosting IP
+1. Deploy code to the hosting provider
+1. Run the `index.js` file as a service using something like `forever` or `nodemon`
+1. Copy the URL/port where your app is running
+1. Oh yeah, make sure it's actually running still...
 
 #### Add to revisit.link
 
