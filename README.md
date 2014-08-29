@@ -10,7 +10,7 @@
 1. Clone this repo
 1. Run `npm install` from the new directory
 1. Make a new GitHub repo for your code, copy the SSH link
-1. Use `git remote set-url <new repo url>` to point your code to your own repo
+1. Use `git remote set-url origin <new repo url>` to point your code to your own repo
 
 #### Transform
 
