@@ -3,10 +3,14 @@ var dataUriToBuffer = require('data-uri-to-buffer')
 var express = require('express')
 var app = express()
 
+/**
+ * This is your custom transform function
+ * move it wherever, call it whatever
+ */
 var transform = require("./transformer")
 
 // Set up some Express settings
-app.use(bodyParser.json({ limit: '2mb' }))
+app.use(bodyParser.json({ limit: '1mb' }))
 app.use(express.static(__dirname + '/public'))
 
 /**
