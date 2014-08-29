@@ -3,6 +3,15 @@
 [Ryan](http://github.com/kid-icarus) made [a glitch sample app](https://github.com/revisitors/glitch-api-example) for [revisit.link](http://revisit.link). I cloned it and edited it a little to make it more bare bones/general use. You can use it to build your own revisit.link service on top of it, if you want.
 
 
+## HALP WANTED
+
+Suggestions or problems? Submit an issue here, or find me on the webs--I'm rhodesjason on freenode and @rhodesjason on Twitter.
+
+Even better: submit pull requests to improve documentation, add a better example, add examples to the lists below, etc etc.
+
+DO IT DO IT DO IT
+
+
 ## How does it work?
 
 #### Setup
