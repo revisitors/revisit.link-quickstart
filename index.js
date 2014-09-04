@@ -1,7 +1,10 @@
+var nconf = require("nconf");
 var bodyParser = require('body-parser')
 var dataUriToBuffer = require('data-uri-to-buffer')
 var express = require('express')
 var app = express()
+
+nconf.argv().env().file({ file: 'local.json'});
 
 /**
  * This is your custom transform function
@@ -38,6 +41,6 @@ app.post('/service', function(req, res) {
 
 })
 
-var port = 8000
+var port = nconf.get("port");
 app.listen(port)
 console.log('server running on port: ', port)
